@@ -1,5 +1,3 @@
 # tour-plan
 
-Eldarka
-asd
-asds
+Eldarka Kh
