@@ -41,6 +41,7 @@ $(document).ready(function () {
     modalDialog.removeClass("modal__dialog--visible");
   }
   $(".modal__form").validate({
+    errorClass: "invalid",
     messages: {
       name: "Please specify your name",
       email: {
@@ -53,6 +54,7 @@ $(document).ready(function () {
     },
   });
   $(".forma").validate({
+    errorClass: "invalid",
     messages: {
       name: "Please specify your name",
       email: {
@@ -64,6 +66,7 @@ $(document).ready(function () {
     },
   });
   $(".formo").validate({
+    errorClass: "invalid",
     messages: {
       name: "Please specify your name",
       email: {
@@ -76,11 +79,21 @@ $(document).ready(function () {
     },
   });
   $(".forme").validate({
+    errorClass: "invalid",
     messages: {
       email: {
         required: "We need your email address to contact you",
         email: "Your email address must be in the format of name@domain.com",
       },
     },
+  });
+  $(document).ready(function () {
+    $("#phone").mask("+7 (999) 999-99-99");
+  });
+  $(document).ready(function () {
+    $("#telphone").mask("+7 (999) 999-99-99");
+  });
+  $(document).ready(function () {
+    $("#telephone").mask("+7 (999) 999-99-99");
   });
 });

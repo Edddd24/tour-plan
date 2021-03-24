@@ -495,9 +495,8 @@
             <div class="footer__contact-form">
               <h3 class="footer__title">Send us a message</h3>
               <form action="send.php" method="POST" class="footer__form forma">
-               <input type="text" class="input footer__input" placeholder="Your Full Name" name="name" required >
-
-               <input type="text" class="input footer__input" placeholder="Phone Number" name="phone" required > 
+               <div class="footer__input-group"><input type="text" class="input footer__input" placeholder="Your Full Name" name="name" required ></div>
+               <div class="footer__input-group"><input type="tel" id="telephone" class="input footer__input" placeholder="Phone Number" name="phone" required ></div> 
                <textarea class="message footer__message" placeholder="Message" name="message"></textarea>
                <button class="button footer__button" type="submit">Send</button>
                <span class="footer__info">*Required Fields</span>
@@ -527,8 +526,8 @@
          <input type="text" class="input modal__input" placeholder="Your Full Name" name="name"
          required >
 
-         <input type="text" class="input modal__input" placeholder="Phone Number" name="phone" required >
-         <input type="text" class="input modal__input" placeholder="Your Email" name="email" required > 
+         <input type="tel" class="input modal__input" id="phone" placeholder="Phone Number" name="phone" required >
+         <input type="email" class="input modal__input" placeholder="Your Email" name="email" required > 
          <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
          <button class="button modal__button" type="submit">Send</button>
          <span class="modal__info">*Required Fields</span>
@@ -547,8 +546,8 @@
         <form action="send.php" method="POST" class="formo">
          <input type="text" class="input modal__input" placeholder="Your Full Name" name="name"
          required >
-         <input type="text" class="input modal__input" placeholder="Phone Number" name="phone" required >
-         <input type="text" class="input modal__input" placeholder="Your Email" name="email" required > 
+         <input type="tel" class="input modal__input" id="telphone" placeholder="Phone Number" name="phone" required >
+         <input type="email" class="input modal__input" placeholder="Your Email" name="email" required > 
          <textarea class="message modal__message" placeholder="Message" name="message"></textarea>
          <button class="button modal__button" type="submit">Send</button>
          <span class="modal__info">*Required Fields</span>
@@ -559,6 +558,7 @@
     <!-- /.modal -->
     <script src="/js/jquery-3.6.0.min.js"></script>
     <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/jquery.maskedinput.min.js"></script>
     <script src="/js/jquery.validate.min.js"></script>
     <script src="/js/main.js"></script>
   </body>
