@@ -253,12 +253,14 @@
           subscribe to our
           <span class="newsletter-title__strong">News letter</span>
         </h2>
-        <form action="#" class="subscribe newsletter__subscribe forme" data-aos="fade-up"
+        <form action="send.php" method="POST" class="subscribe newsletter__subscribe forme" data-aos="fade-up"
         data-aos-anchor-placement="top-bottom" data-aos-delay="300">
           <input
-            type="text"
+            type="email"
             class="subscribe__input"
             placeholder="Your email address"
+            id="email"
+            name="email"
             required
           />
           <button class="subscribe__button">Send</button>
@@ -484,13 +486,15 @@
                 </li>
                 <li class="footer__item footer__item--mb-2">
                   <div class="footer__icon-wrapper"><img class="footer__icon" src="/img/bx_bxs-phone-call.svg" alt="Icon: phone"></div>
-                  Tel (business hours) : 269 1500 <br />
-                  Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm) <br />
-                  Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm) 
+                <div class="footer__itemm">
+                  Tel (business hours):<a class="footer__linnk" href="tel">269 1500</a> <br />
+                  Tel (hotline) Monday - Saturday: <a href="tel" class="footer__linnk">52-56-61-38</a> (08:00 am – 20:00 pm) <br />
+                  Tel (hotline) Sunday: <a href="tel" class="footer__linnk">52-56-61-38</a> (08:00 am – 14:00 pm) 
+                </div>
                 </li>
                 <li class="footer__item footer__item--mb-2">
                   <div class="footer__icon-wrapper"><img class="footer__icon" src="/img/mail-lett.svg" alt="Icon: mail"></div>
-                  cherly.lawson@example.com
+                 <a href="email" class="footer__linnk">cherly.lawson@example.com</a>
                 </li>
               </ul>
             </div>
@@ -498,7 +502,7 @@
             <div class="footer__contact-form">
               <h3 class="footer__title">Send us a message</h3>
               <form action="send.php" method="POST" class="footer__form forma">
-               <div class="footer__input-group"><input type="text" class="input footer__input" placeholder="Your Full Name" name="name" required ></div>
+               <div class="footer__input-group"><input type="text" class="input footer__input" placeholder="Your Full Name" name="name" required minlength="2" ></div>
                <div class="footer__input-group"><input type="tel" id="telephone" class="input footer__input" placeholder="Phone Number" name="phone" required ></div> 
                <textarea class="message footer__message" placeholder="Message" name="message"></textarea>
                <button class="button footer__button" type="submit">Send</button>
@@ -527,7 +531,7 @@
         <h3 class="modal__title">Booking</h3>
         <form action="send.php" method="POST" class="modal__form">
          <input type="text" class="input modal__input" placeholder="Your Full Name" name="name"
-         required >
+         required minlength="2" >
 
          <input type="tel" class="input modal__input" id="phone" placeholder="Phone Number" name="phone" required >
          <input type="email" class="input modal__input" placeholder="Your Email" name="email" required > 
@@ -548,7 +552,7 @@
         <h3 class="modal__title">Send us a feedback</h3>
         <form action="send.php" method="POST" class="formo">
          <input type="text" class="input modal__input" placeholder="Your Full Name" name="name"
-         required >
+         required minlength="2" >
          <input type="tel" class="input modal__input" id="telphone" placeholder="Phone Number" name="phone" required >
          <input type="email" class="input modal__input" placeholder="Your Email" name="email" required > 
          <textarea class="message modal__message" placeholder="Message" name="message"></textarea>

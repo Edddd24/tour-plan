@@ -43,7 +43,10 @@ $(document).ready(function () {
   $(".modal__form").validate({
     errorClass: "invalid",
     messages: {
-      name: "Please specify your name",
+      name: {
+        required: "Please specify your name",
+        minlength: "Name must be at least 2 letters",
+      },
       email: {
         required: "We need your email address to contact you",
         email: "Your email address must be in the format of name@domain.com",
@@ -56,7 +59,10 @@ $(document).ready(function () {
   $(".forma").validate({
     errorClass: "invalid",
     messages: {
-      name: "Please specify your name",
+      name: {
+        required: "Please specify your name",
+        minlength: "Name must be at least 2 letters",
+      },
       email: {
         required: "We need your email address to contact you",
       },
@@ -68,7 +74,10 @@ $(document).ready(function () {
   $(".formo").validate({
     errorClass: "invalid",
     messages: {
-      name: "Please specify your name",
+      name: {
+        required: "Please specify your name",
+        minlenght: "name must be at least 2 letters",
+      },
       email: {
         required: "We need your email address to contact you",
         email: "Your email address must be in the format of name@domain.com",
@@ -79,12 +88,9 @@ $(document).ready(function () {
     },
   });
   $(".forme").validate({
-    errorClass: "invalid",
-    messages: {
-      email: {
-        required: "We need your email address to contact you",
-        email: "Your email address must be in the format of name@domain.com",
-      },
+    email: {
+      required: "We need your email address to contact you",
+      email: "Your email address must be in the format of name@domain.com",
     },
   });
   $(document).ready(function () {
